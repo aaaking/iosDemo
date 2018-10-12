@@ -15,6 +15,7 @@ class Tab1: UIViewController {
         createData()
         self.view.backgroundColor = UIColor.red
         self.navigationItem.title = "nav1"
+        self.title = "homehome"
         // Do any additional setup after loading the view.
         let statusBarHeight = UIApplication.shared.statusBarFrame.size.height // 20
         let navBarHeight = self.navigationController?.navigationBar.frame.size.height ?? 0 // 44
@@ -31,12 +32,17 @@ class Tab1: UIViewController {
         btnRead.backgroundColor = UIColor.green
         btnRead.addTarget(self, action: #selector(clickRead), for: .touchUpInside)
         self.view.addSubview(btnRead)
+        //
+        let btn1 = UIButton(frame: CGRect(x: btnRead.frame.origin.x + btnRead.frame.size.width + 5, y: statusBarHeight + navBarHeight, width: 0, height: 0))
+        btn1.setTitle("页面跳转", for: .normal)
+        btn1.addTarget(self, action: #selector(jumpPage), for: .touchUpInside)
+        self.view.addSubview(btn1)
     }
     
     @objc func clickSave() {
         dataModel.saveData()
     }
-    
+
     @objc func clickRead() {
         dataModel.loadData()
     }
@@ -46,6 +52,10 @@ class Tab1: UIViewController {
         dataModel.userList.append(UserInfo(name: "zzh2", phone: "1311111112"))
         dataModel.userList.append(UserInfo(name: "zzh3", phone: "1311111113"))
         dataModel.userList.append(UserInfo(name: "zzh4", phone: "1311111114"))
+    }
+    
+    @objc func jumpPage() {
+        
     }
 
     /*
