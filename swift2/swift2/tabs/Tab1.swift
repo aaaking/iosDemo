@@ -62,6 +62,9 @@ class Tab1: UIViewController {
         let controller2 = ViewController2()
         controller2.textStr = "告诉我1+1=？"
         controller2.tab1 = self
+        controller2.getBlock { (value) in
+            self.btn1?.setTitle(value, for: .normal)
+        }
 //        self.present(controller2, animated: true) {
 //            print("-----切换到了视图控制器2-----")
 //        }

@@ -8,9 +8,12 @@
 
 import UIKit
 
+typealias textBlock = (String) -> ()//和oc的typedef类似
+
 class ViewController2: UIViewController {
     var textStr = "controller 2"
     var tab1: Tab1?
+    var block: textBlock?
     override func loadView() {
         super.loadView()
         print("2-----loadView")
@@ -46,7 +49,11 @@ class ViewController2: UIViewController {
     }
     override func viewDidDisappear(_ animated: Bool) {
         print("2-------viewDidDisappear")
-        backToTab1()
+//        backToTab1()
+        guard let block = self.block else {
+            return
+        }
+        block("结果是\(Float.random(in: 0...1))")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -69,5 +76,9 @@ class ViewController2: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func getBlock(block: textBlock?) {
+        self.block = block
+    }
 
 }
