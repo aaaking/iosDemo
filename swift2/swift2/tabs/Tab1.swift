@@ -10,6 +10,9 @@ import UIKit
 
 class Tab1: UIViewController {
     var dataModel = DataModel()
+    var btn1: UIButton?
+    //
+    var dataFromOtherPage = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         createData()
@@ -33,11 +36,11 @@ class Tab1: UIViewController {
         btnRead.addTarget(self, action: #selector(clickRead), for: .touchUpInside)
         self.view.addSubview(btnRead)
         //
-        let btn1 = UIButton(frame: CGRect(x: btnRead.frame.origin.x + btnRead.frame.size.width + 5, y: statusBarHeight + navBarHeight, width: 0, height: 0))
-        btn1.setTitle("页面跳转", for: .normal)
-        btn1.sizeToFit()
-        btn1.addTarget(self, action: #selector(jumpPage), for: .touchUpInside)
-        self.view.addSubview(btn1)
+        self.btn1 = UIButton(frame: CGRect(x: btnRead.frame.origin.x + btnRead.frame.size.width + 5, y: statusBarHeight + navBarHeight, width: 0, height: 0))
+        self.btn1?.setTitle("页面跳转", for: .normal)
+        self.btn1?.sizeToFit()
+        self.btn1?.addTarget(self, action: #selector(jumpPage), for: .touchUpInside)
+        self.view.addSubview(self.btn1!)
     }
     
     @objc func clickSave() {
@@ -58,6 +61,7 @@ class Tab1: UIViewController {
     @objc func jumpPage() {
         let controller2 = ViewController2()
         controller2.textStr = "告诉我1+1=？"
+        controller2.tab1 = self
 //        self.present(controller2, animated: true) {
 //            print("-----切换到了视图控制器2-----")
 //        }
@@ -77,6 +81,10 @@ class Tab1: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    func resultFrom2(data: Any) {
+        self.btn1?.setTitle("\(data)", for: .normal)
     }
 
 }

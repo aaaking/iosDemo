@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController2: UIViewController {
     var textStr = "controller 2"
+    var tab1: Tab1?
     override func loadView() {
         super.loadView()
         print("2-----loadView")
@@ -45,12 +46,18 @@ class ViewController2: UIViewController {
     }
     override func viewDidDisappear(_ animated: Bool) {
         print("2-------viewDidDisappear")
+        backToTab1()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        self.dismiss(animated: true) {
 //            print("2------dismiss")
 //        }
+    }
+    
+    func backToTab1() {
+        self.tab1?.dataFromOtherPage = "结果是2"
+        self.tab1?.resultFrom2(data: "结果是\(Float.random(in: 0...1))")
     }
 
     /*
