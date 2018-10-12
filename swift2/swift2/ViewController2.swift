@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController2: UIViewController {
+    var textStr = "controller 2"
     override func loadView() {
         super.loadView()
         print("2-----loadView")
@@ -20,8 +21,9 @@ class ViewController2: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.gray
         let label = UILabel()
-        label.frame = CGRect(x: 20, y: 120, width: 100, height: 40)
-        label.text = "controller 2"
+        label.frame = CGRect(x: 20, y: 120, width: 200, height: 40)
+//        label.sizeToFit()
+        label.text = self.textStr
         label.backgroundColor = UIColor.red
         self.view.addSubview(label)
         print("2-----self.window: \(self.view.window)")

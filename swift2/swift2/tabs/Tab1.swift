@@ -57,6 +57,7 @@ class Tab1: UIViewController {
     
     @objc func jumpPage() {
         let controller2 = ViewController2()
+        controller2.textStr = "告诉我1+1=？"
 //        self.present(controller2, animated: true) {
 //            print("-----切换到了视图控制器2-----")
 //        }
