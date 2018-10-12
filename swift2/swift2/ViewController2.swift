@@ -18,12 +18,15 @@ class ViewController2: UIViewController {
         super.viewDidLoad()
         print("2-----viewDidLoad")
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor.red
+        view.backgroundColor = UIColor.gray
         let label = UILabel()
         label.frame = CGRect(x: 20, y: 120, width: 100, height: 40)
         label.text = "controller 2"
+        label.backgroundColor = UIColor.red
         self.view.addSubview(label)
         print("2-----self.window: \(self.view.window)")
+        //
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,9 +46,9 @@ class ViewController2: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.dismiss(animated: true) {
-            print("2------dismiss")
-        }
+//        self.dismiss(animated: true) {
+//            print("2------dismiss")
+//        }
     }
 
     /*

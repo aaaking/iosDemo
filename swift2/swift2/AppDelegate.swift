@@ -16,8 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let v = ViewController()
-        let nav = UINavigationController(rootViewController: v)
         //
         let tab = UITabBarController()
         
@@ -41,11 +39,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tab4.title = "Me"
         let nav4 = UINavigationController(rootViewController: tab4)
         
-        tab.viewControllers = [nav1, nav2, nav3, nav4]
+//        tab.viewControllers = [nav1, nav2, nav3, nav4]
+        tab.viewControllers = [nav1, tab2, tab3, tab4]
         
+//        let nav = UINavigationController(rootViewController: tab)
+
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = tab//nav
+        self.window?.rootViewController = tab//nav//
         return true
     }
 

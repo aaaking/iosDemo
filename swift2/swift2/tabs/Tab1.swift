@@ -35,6 +35,7 @@ class Tab1: UIViewController {
         //
         let btn1 = UIButton(frame: CGRect(x: btnRead.frame.origin.x + btnRead.frame.size.width + 5, y: statusBarHeight + navBarHeight, width: 0, height: 0))
         btn1.setTitle("页面跳转", for: .normal)
+        btn1.sizeToFit()
         btn1.addTarget(self, action: #selector(jumpPage), for: .touchUpInside)
         self.view.addSubview(btn1)
     }
@@ -55,7 +56,12 @@ class Tab1: UIViewController {
     }
     
     @objc func jumpPage() {
-        
+        let controller2 = ViewController2()
+//        self.present(controller2, animated: true) {
+//            print("-----切换到了视图控制器2-----")
+//        }
+        self.navigationController?.pushViewController(controller2, animated: true)
+//        self.tabBarController?.navigationController?.pushViewController(controller2, animated: true)
     }
 
     /*
@@ -67,5 +73,9 @@ class Tab1: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
 
 }
