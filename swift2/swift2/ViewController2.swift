@@ -14,25 +14,33 @@ class ViewController2: UIViewController {
     var textStr = "controller 2"
     var tab1: Tab1?
     var block: textBlock?
+    @objc dynamic var fs = "\(Float.random(in: 0...1))"
+    @objc dynamic var textMessage: String = "textMessage"
+    var textFiled1: UITextField = UITextField(frame: CGRect(x: 20, y: 165, width: 200, height: 40))
     override func loadView() {
         super.loadView()
         print("2-----loadView")
     }
 
     override func viewDidLoad() {
+        fs = "\(Float.random(in: 0...1))"
         super.viewDidLoad()
         print("2-----viewDidLoad")
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.gray
-        let label = UILabel()
+        let label = UIButton()
         label.frame = CGRect(x: 20, y: 120, width: 200, height: 40)
 //        label.sizeToFit()
-        label.text = self.textStr
+        label.setTitle(self.textStr, for: .normal)
         label.backgroundColor = UIColor.red
         self.view.addSubview(label)
         print("2-----self.window: \(self.view.window)")
         //
         self.tabBarController?.tabBar.isHidden = true
+        label.addTarget(self, action: #selector(clickBack), for: .touchUpInside)
+        //
+        self.textFiled1.backgroundColor = UIColor.blue
+        self.view.addSubview(self.textFiled1)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,11 +57,14 @@ class ViewController2: UIViewController {
     }
     override func viewDidDisappear(_ animated: Bool) {
         print("2-------viewDidDisappear")
+        //////////
 //        backToTab1()
+        ////////////
         guard let block = self.block else {
             return
         }
         block("结果是\(Float.random(in: 0...1))")
+        ////////notification
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -79,6 +90,12 @@ class ViewController2: UIViewController {
     
     func getBlock(block: textBlock?) {
         self.block = block
+    }
+    
+    @objc func clickBack() {
+        /////kvo
+//        self.setValue(fs, forKey: textMessage)
+//        self.navigationController?.popViewController(animated: true)
     }
 
 }

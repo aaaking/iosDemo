@@ -11,6 +11,8 @@ import UIKit
 class Tab1: UIViewController {
     var dataModel = DataModel()
     var btn1: UIButton?
+    @objc dynamic var textMessage: String = "textMessage"
+    @objc dynamic var controller2 = ViewController2()
     //
     var dataFromOtherPage = ""
     override func viewDidLoad() {
@@ -41,6 +43,8 @@ class Tab1: UIViewController {
         self.btn1?.sizeToFit()
         self.btn1?.addTarget(self, action: #selector(jumpPage), for: .touchUpInside)
         self.view.addSubview(self.btn1!)
+        //
+        self.controller2.addObserver(self, forKeyPath: textMessage, options: NSKeyValueObservingOptions(rawValue: NSKeyValueObservingOptions.new.rawValue), context: nil)
     }
     
     @objc func clickSave() {
@@ -59,16 +63,15 @@ class Tab1: UIViewController {
     }
     
     @objc func jumpPage() {
-        let controller2 = ViewController2()
-        controller2.textStr = "告诉我1+1=？"
-        controller2.tab1 = self
-        controller2.getBlock { (value) in
+        self.controller2.textStr = "告诉我1+1=？"
+        self.controller2.tab1 = self
+        self.controller2.getBlock { (value) in
             self.btn1?.setTitle(value, for: .normal)
         }
 //        self.present(controller2, animated: true) {
 //            print("-----切换到了视图控制器2-----")
 //        }
-        self.navigationController?.pushViewController(controller2, animated: true)
+        self.navigationController?.pushViewController(self.controller2, animated: true)
 //        self.tabBarController?.navigationController?.pushViewController(controller2, animated: true)
     }
 
@@ -89,5 +92,13 @@ class Tab1: UIViewController {
     func resultFrom2(data: Any) {
         self.btn1?.setTitle("\(data)", for: .normal)
     }
-
+    
+    //oc--dealloc
+    deinit {
+        self.controller2.removeObserver(self, forKeyPath: textMessage)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        self.btn1?.setTitle(String(describing: change!), for: .normal)
+    }
 }
