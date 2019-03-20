@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>gb_seperate_111111111111</key>
+	<string>login=================</string>
+	<key>gb_login_login_type</key>
+	<string>Anmelden mit</string>
+	<key>gb_login_other_login_type</key>
+	<string>oder Anmelden mit</string>
+	<key>gb_login_success</key>
+	<string>Willkommen zurück</string>
+	<key>gb_login_conect_error</key>
+	<string>Verbindung zum Server nicht möglich ...</string>
+	<key>gb_login_guest</key>
+	<string>Gast</string>
+	<key>gb_login_gamebegin</key>
+	<string>GameBegin</string>
+	<key>gb_login_facebook</key>
+	<string>Facebook</string>
+	<key>gb_login_twitter</key>
+	<string>Twitter</string>
+	<key>gb_login_line</key>
+	<string>Line</string>
+	<key>gb_login_googleplay</key>
+	<string>Google Play</string>
+	<key>gb_login_wx</key>
+	<string>Wechat</string>
+	<key>gb_login_qq</key>
+	<string>QQ</string>
+	<key>gb_login_hint_login_name</key>
+	<string>Gamebegin-Konto angeben</string>
+	<key>gb_login_hint_login_psd</key>
+	<string>Passwort</string>
+	<key>gb_login_name_no_empty</key>
+	<string>Nutzername darf nicht leer sein</string>
+	<key>gb_login_psd_no_empty</key>
+	<string>Passwort darf nicht leer sein</string>
+	<key>gb_login_name_wrong_length</key>
+	<string>Nutzername muss zwischen 3 und 20 Zeichen betragen</string>
+	<key>gb_login_login_wrong_psd</key>
+	<string>Passwort muss zwischen 6 und 20 Zeichen betragen</string>
+	<key>gb_login_hint_register_name</key>
+	<string>Muss zwischen 3 und 20 Zeichen betragen</string>
+	<key>gb_login_hint_register_psd</key>
+	<string>6 und 20 Zeichen</string>
+	<key>gb_seperate_2222222222</key>
+	<string>登录页面=================</string>
+	<key>gb_login_gamebegin_login</key>
+	<string>Anm</string>
+	<key>gb_login_gamebegin_login_retrieve</key>
+	<string>Passwort vergessen</string>
+	<key>gb_login_gamebegin_login_register</key>
+	<string>Schnell registrieren</string>
+	<key>gb_seperate_33333333333</key>
+	<string>快速注册页面=================</string>
+	<key>gb_login_gamebegin_register</key>
+	<string>Registrieren</string>
+	<key>gb_login_gamebegin_privacy_policy_dis</key>
+	<string>Ich habe sie gelesen und stimme den</string>
+	<key>gb_login_gamebegin_privacy_policy_btn</key>
+	<string>Nutzungsbedingungen zu</string>
+	<key>gb_login_gamebegin_privacy_policy_check_text</key>
+	<string>Bitte prüfe die &quot;Nutzungsbedingungen&quot;</string>
+	<key>gb_seperate_4444444444</key>
+	<string>找回密码=================</string>
+	<key>gb_login_retrieve_input_email_dis</key>
+	<string>Gib deine E-Mail-Adresse ein, um dein Passwort zurückzusetzen</string>
+	<key>gb_login_retrieve_input_email</key>
+	<string>E-Mail-Adresse</string>
+	<key>gb_login_retrieve_next</key>
+	<string>Weiter</string>
+	<key>gb_login_retrieve_input_cerrect_email</key>
+	<string>Bitte gib deine korrekte E-Mail-Adresse an</string>
+	<key>gb_seperate_555555555555</key>
+	<string>客服页面=================</string>
+	<key>gb_gamebegin_account_security</key>
+	<string>Konto</string>
+	<key>gb_gamebegin_feedback</key>
+	<string>Feedback</string>
+	<key>gb_gamebegin_logout</key>
+	<string>Abmelden</string>
+	<key>gb_seperate_6666666666</key>
+	<string>账号升级=================</string>
+	<key>gb_gamebegin_user_bind</key>
+	<string>Konto erweitern</string>
+	<key>gb_gamebegin_user_bind_alert</key>
+	<string>Du bist jetzt ein Besucher. Bitte erweitere dein Konto zu einem offiziellen Konto, um dein Spiel speichern zu können</string>
+	<key>gb_gamebegin_user_bind_success</key>
+	<string>Erfolgreich verbunden</string>
+	<key>gb_gamebegin_user_bind_type</key>
+	<string>verbinden mit</string>
+	<key>gb_gamebegin_ok</key>
+	<string>OK</string>
+	<key>gb_gamebegin_cancel</key>
+	<string>Abbr.</string>
+</dict>
+</plist>
