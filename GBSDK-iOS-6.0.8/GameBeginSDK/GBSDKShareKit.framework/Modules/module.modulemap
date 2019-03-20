@@ -1,6 +1,0 @@
-framework module GBSDKShareKit {
-  umbrella header "GBSDKShareKit.h"
-
-  export *
-  module * { export * }
-}
