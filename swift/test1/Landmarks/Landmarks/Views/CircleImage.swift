@@ -11,6 +11,9 @@ struct CircleImage: View {
     var image: Image
     
     var body: some View {
+        //        Image(systemName: "globe")
+        //            .imageScale(.large)
+        //            .foregroundStyle(.tint)
         image
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             .overlay(Circle().stroke(.white, lineWidth: 4))
