@@ -29,45 +29,37 @@ struct LandmarkList: View {
     }
     
     var body: some View {
-        VStack() {
-//            HStack {
-//                Divider().frame(height: 10)
-//                // del
-//                Button(action: {
-//                    print("del button clicked")
-//                    if landmarkList.count > 0 {
-//                        landmarkList.remove(at: 0)
-//                        print("origin size=\(modelData.landmarks.count)")
-//                    }
-//                }, label: {
-//                    Text("del").frame(height: 50).foregroundColor(.black)
-//                }).frame(height: 60).background(Color.blue)//.foregroundColor(.pink)//.id("idDelFirst")
-//                Divider().frame(height: 10)
-//                // filter
-//                Button(action: {
-//                    print("filter button clicked, showFavoritesOnly:")
-//                    showFavoritesOnly = !showFavoritesOnly
-//                }, label: {
-//                    Text("filter=\(showFavoritesOnly.description)")
-//                }).frame(height: 50).background(Color.orange)//.id("idFilterFavorite")
-//            }
-//            Spacer()
-            NavigationSplitView {
-                List {
-                    Toggle(isOn: $showFavoritesOnly) {
-                        Text("Favorites only")
-                    }
-                    ForEach(filteredLandmarks, id: \.id) { landmark in
-                        NavigationLink {
-                            LandmarkDetail(landmark: landmark).environment(modelData)
-                        } label: {
-                            LandmarkRow(landmark: landmark).environment(modelData)
-                        }}
+        NavigationSplitView {
+            List {
+                Toggle(isOn: $showFavoritesOnly) {
+                    Text("Favorites only")
                 }
-                .navigationTitle("Landmarks")
-            } detail: {
-                Text("Select a Landmark")
+                // del
+                Button(action: {
+                    if landmarkList.count > 0 {
+                        landmarkList.remove(at: 0)
+                    }
+                    print("del button clicked origin size=\(modelData.landmarks.count)")
+                }, label: {
+                    Text("del").foregroundColor(.black)
+                }).tag("featf").background(Color.blue)//.foregroundColor(.pink)//.id("idDelFirst")
+                // filter
+                Button(action: {
+                    print("filter button clicked, showFavoritesOnly:")
+                    showFavoritesOnly = !showFavoritesOnly
+                }, label: {
+                    Text("filter=\(showFavoritesOnly.description)")
+                }).tag("243qrfe").background(Color.orange)//.id("idFilterFavorite")
+                ForEach(filteredLandmarks, id: \.id) { landmark in
+                    NavigationLink {
+                        LandmarkDetail(landmark: landmark).environment(modelData)
+                    } label: {
+                        LandmarkRow(landmark: landmark).environment(modelData)
+                    }}
             }
+            .navigationTitle("Landmarks")
+        } detail: {
+            Text("Select a Landmark")
         }
     }
 }
