@@ -9,37 +9,35 @@ import SwiftUI
 
 
 struct LandmarkList: View {
-    @Environment(ModelData.self) var modelData
+    @Environment(ModelData.self) var modelData2
+    var modelData = ModelData()
     @State private var landmarkList: [Landmark] = []
     @State private var showFavoritesOnly: Bool = false
     var filteredLandmarks: [Landmark] {
-        modelData.landmarks.filter { landmark in
-                (!showFavoritesOnly || landmark.isFavorite)
-            }
+        landmarkList.filter { landmark in
+            (!showFavoritesOnly || landmark.isFavorite)
         }
+    }
     
     init() {
-//        _landmarkList = State(initialValue: modelData.landmarks)
-//        filteredLandmarks = {
-//            landmarkList.filter { landmark in
-//                (!showFavoritesOnly || landmark.isFavorite)
-//            }
-//        }()
+        _landmarkList = State(initialValue: modelData.landmarks)
+        //        filteredLandmarks = {
+        //            landmarkList.filter { landmark in
+        //                (!showFavoritesOnly || landmark.isFavorite)
+        //            }
+        //        }()
     }
     
     var body: some View {
-//        if landmarkList.count <= 0 {
-//            _landmarkList = State(initialValue: modelData.landmarks)
-//        }
-        
         VStack() {
             HStack {
                 Divider().frame(height: 10)
                 // del
                 Button(action: {
                     print("del button clicked")
-                    if modelData.landmarks.count > 0 {
-                        modelData.landmarks.remove(at: 0)
+                    if landmarkList.count > 0 {
+                        landmarkList.remove(at: 0)
+                        print("origin size=\(modelData.landmarks.count)")
                     }
                 }, label: {
                     Text("del").frame(height: 50).foregroundColor(.black)
