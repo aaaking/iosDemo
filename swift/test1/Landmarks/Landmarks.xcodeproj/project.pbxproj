@@ -61,6 +61,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1E0298302D0031990023EB6B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1EDA5D902D0025B000404CB3 /* landmarkData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1EDB321D2CFFF5FA009A00D4 = {
 			isa = PBXGroup;
 			children = (
@@ -80,12 +88,12 @@
 		1EDB32282CFFF5FA009A00D4 /* Landmarks */ = {
 			isa = PBXGroup;
 			children = (
+				1E0298302D0031990023EB6B /* Resources */,
 				1E02982F2D0031070023EB6B /* Views */,
 				1E02982D2D0030E70023EB6B /* Model */,
 				1EDB32292CFFF5FA009A00D4 /* LandmarksApp.swift */,
 				1EDB322D2CFFF5FC009A00D4 /* Assets.xcassets */,
 				1EDB322F2CFFF5FC009A00D4 /* Preview Content */,
-				1EDA5D902D0025B000404CB3 /* landmarkData.json */,
 			);
 			path = Landmarks;
 			sourceTree = "<group>";
