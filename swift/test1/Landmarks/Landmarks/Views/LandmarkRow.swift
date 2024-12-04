@@ -14,13 +14,21 @@ struct LandmarkRow: View {
             landmark.image
                 .resizable()
                 .frame(width: 50, height: 50)
-            Text(landmark.name)
+            Text("\(landmark.id)-\(landmark.name)")
             Spacer()
         }
         
     }
 }
 
-#Preview {
+#Preview("Turtle Rock") {
     LandmarkRow(landmark: landmarks[0])
 }
+
+#Preview("Salmon") {
+    Group {
+        LandmarkRow(landmark: landmarks[0])
+        LandmarkRow(landmark: landmarks[1])
+    }
+}
+
