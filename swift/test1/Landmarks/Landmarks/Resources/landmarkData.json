@@ -43,7 +43,7 @@
         "name":"Shanghai",
         "imageName":"green-3",
         "park":"ispark",
-        "isFavorite":false,
+        "isFavorite":true,
         "state":"China",
         "description":"a park just haha",
         "coordinates": {
