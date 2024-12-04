@@ -28,16 +28,18 @@ struct LandmarkList: View {
                         landmarkList.remove(at: 0)
                     }
                 }, label: {
-                    Text("del").foregroundColor(.red)
-                }).background(Color.blue).frame(height: 160)//.id("idDelFirst")
+                    Text("del").foregroundColor(.black).frame(height: 50)
+                }).frame(height: 60).background(Color.blue)//.foregroundColor(.pink)//.id("idDelFirst")
+                Spacer()
                 // filter
                 Button(action: {
                     print("filter button clicked, showFavoritesOnly:")
                     showFavoritesOnly = !showFavoritesOnly
                 }, label: {
                     Text("filter=\(showFavoritesOnly.description)")
-                }).background(Color.orange).frame(height: 50).offset(x: 100)//.id("idFilterFavorite")
+                }).frame(height: 50).background(Color.orange)//.id("idFilterFavorite")
             }
+            Spacer()
             NavigationSplitView {
                 List {
                     ForEach(filteredLandmarks, id: \.id) { landmark in
