@@ -1,0 +1,73 @@
+# Xcode
+*.pbxuser
+!*.pbxproj
+*.mode1v3
+*.mode2v3
+*.mode1
+*.mode2
+*.perspectivev3
+*.perspective
+*.xcworkspace
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.xcarchive
+*.xcresult
+*.app
+*.appex
+*.framework
+*.dSYM
+*.xcconfig
+
+# Pods
+Pods/
+
+# Carthage
+Carthage/
+Build/
+
+# Swift Package Manager
+.swift-version
+Package.pins
+Package.resolved
+.build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/README.md
+fastlane/DeliverFile.zip
+fastlane/metadata
+fastlane/screenshots
+
+# CocoaPods
+# .repeatability-data is used to store the state of the last pod install.
+# .repeatability-data-old is a backup of the previous .repeatability-data file.
+.repeatability-data
+.repeatability-data-old
+
+# Other
+*.log
+*.tmp
+*.swp
+*.DS_Store
+*.xccheckout
+*.xcuserstate
+*.xcactivitylog
+*.xcscmblueprint
+*.xcshareddata
+*.xcuserdatad
+*.xcworkspace
+*.xcworkspacedata
+*.xccheckout
+*.xcuserstate
+*.xcactivitylog
+*.xcscmblueprint
+*.xcshareddata
+*.xcuserdatad
+*.xcworkspace
+*.xcworkspacedata
