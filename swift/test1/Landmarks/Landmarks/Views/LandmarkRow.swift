@@ -16,19 +16,23 @@ struct LandmarkRow: View {
                 .frame(width: 50, height: 50)
             Text("\(landmark.id)-\(landmark.name)")
             Spacer()
+            if landmark.isFavorite {
+                Image(systemName: "star.fill")
+            }   
         }
         
     }
-}
-
-#Preview("Turtle Rock") {
-    LandmarkRow(landmark: landmarks[0])
 }
 
 #Preview("Salmon") {
     Group {
         LandmarkRow(landmark: landmarks[0])
         LandmarkRow(landmark: landmarks[1])
+        LandmarkRow(landmark: landmarks[2])
+        LandmarkRow(landmark: landmarks[3])
+        LandmarkRow(landmark: landmarks[4])
+        LandmarkRow(landmark: landmarks[5])
+        LandmarkRow(landmark: landmarks[6])
     }
 }
 
