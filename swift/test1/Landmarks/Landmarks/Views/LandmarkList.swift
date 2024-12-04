@@ -21,6 +21,7 @@ struct LandmarkList: View {
 
         VStack() {
             HStack {
+                Divider().frame(height: 10)
                 // del
                 Button(action: {
                     print("del button clicked")
@@ -28,9 +29,9 @@ struct LandmarkList: View {
                         landmarkList.remove(at: 0)
                     }
                 }, label: {
-                    Text("del").foregroundColor(.black).frame(height: 50)
+                    Text("del").frame(height: 50).foregroundColor(.black)
                 }).frame(height: 60).background(Color.blue)//.foregroundColor(.pink)//.id("idDelFirst")
-                Spacer()
+                Divider().frame(height: 10)
                 // filter
                 Button(action: {
                     print("filter button clicked, showFavoritesOnly:")
@@ -42,6 +43,9 @@ struct LandmarkList: View {
             Spacer()
             NavigationSplitView {
                 List {
+                    Toggle(isOn: $showFavoritesOnly) {
+                        Text("Favorites only")
+                    }
                     ForEach(filteredLandmarks, id: \.id) { landmark in
                         NavigationLink {
                             LandmarkDetail(landmark: landmark)
