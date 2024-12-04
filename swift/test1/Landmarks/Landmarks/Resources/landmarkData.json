@@ -1,11 +1,15 @@
-{
-    "id":1001,
-    "name":"Turtle Rock",
-    "imageName":"green-1",
-    "kind":"park",
-    "description":"a park just haha",
-    "coordinates": {
-        "lat":34.011286,
-        "long":-116.166868
+[
+    {
+        "id":1001,
+        "name":"Turtle Rock",
+        "imageName":"green-1",
+        "park":"ispark",
+        "state":"USA",
+        "description":"a park just haha",
+        "coordinates": {
+            "latitude":34.011286,
+            "longitude":-116.166868
+        }
     }
-}
+]
+
