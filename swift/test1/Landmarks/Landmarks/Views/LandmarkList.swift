@@ -61,7 +61,7 @@ struct LandmarkList: View {
                         NavigationLink {
                             LandmarkDetail(landmark: landmark).environment(modelData)
                         } label: {
-                            LandmarkRow(landmark: landmark)
+                            LandmarkRow(landmark: landmark).environment(modelData)
                         }}
                 }
                 .navigationTitle("Landmarks")
