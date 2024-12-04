@@ -9,7 +9,15 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
-struct Landmark: Hashable, Codable, Identifiable {
+struct Landmark: Hashable, Codable, Identifiable, Equatable {
+    static func == (lhs: Landmark, rhs: Landmark) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
     var id: Int
     var isFavorite: Bool = false
     var name: String

@@ -9,6 +9,12 @@ import SwiftUI
 
 struct LandmarkRow: View {
     var landmark: Landmark
+    @State private var landmarkReal: Landmark
+    init(landmark: Landmark) {
+        self.landmark = landmark
+        _landmarkReal = State(initialValue: landmark)
+    }
+
     var body: some View {
         HStack {
             landmark.image
@@ -16,7 +22,7 @@ struct LandmarkRow: View {
                 .frame(width: 50, height: 50)
             Text("\(landmark.id)-\(landmark.name)")
             Spacer()
-            if landmark.isFavorite {
+            if landmarkReal.isFavorite {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
             }
