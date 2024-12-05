@@ -1,15 +1,15 @@
 /*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A view displaying information about a hike, including an elevation graph.
-*/
+ See the LICENSE.txt file for this sample’s licensing information.
+ 
+ Abstract:
+ A view displaying information about a hike, including an elevation graph.
+ */
 
 import SwiftUI
 
 extension AnyTransition {
     static var moveAndFade: AnyTransition {
-//        AnyTransition.slide
+        //        AnyTransition.slide
         .asymmetric(
             insertion: .move(edge: .trailing).combined(with: .opacity),
             removal: .scale.combined(with: .opacity)
@@ -37,13 +37,14 @@ struct HikeView: View {
 
                 Button {
                     withAnimation {
-                        showDetail.toggle()
+                        self.showDetail.toggle()
                     }
                 } label: {
                     Label("Graph", systemImage: "chevron.right.circle")
                         .labelStyle(.iconOnly)
                         .imageScale(.large)
                         .rotationEffect(.degrees(showDetail ? 90 : 0))
+                        // .animation(nil, value: showDetail) // this will prevent the rotation effect from being animated
                         .scaleEffect(showDetail ? 1.5 : 1)
                         .padding()
                 }
