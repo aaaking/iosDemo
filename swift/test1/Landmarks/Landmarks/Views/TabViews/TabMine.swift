@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabMine: View {
     var body: some View {
-        Text("Mine!")
+        ProfileSummary(profile: Profile.default)
     }
 }
 

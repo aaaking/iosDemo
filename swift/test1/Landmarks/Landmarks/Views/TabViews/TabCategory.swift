@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabCategory: View {
     @State private var modelData = ModelData.sharedInstance()
+    @State private var showingProfile = false
 
     var body: some View {
         NavigationSplitView {
@@ -24,6 +25,16 @@ struct TabCategory: View {
                 }
             }
             .navigationTitle("Featured")
+            .toolbar {
+                Button {
+                    showingProfile.toggle()
+                } label: {
+                    Label("User Profile", systemImage: "person.crop.circle")
+                }
+            }
+            .sheet(isPresented: $showingProfile) {
+                ProfileHost()
+            }
         } detail: {
             Text("Select a Landmark")
         }
