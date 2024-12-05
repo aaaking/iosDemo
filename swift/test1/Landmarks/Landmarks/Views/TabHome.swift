@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabHome: View {
     var body: some View {
-        LandmarkList()
+        LandmarkList().environment(ModelData())
     }
 }
 

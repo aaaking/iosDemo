@@ -8,9 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    let mTabbarHeight: CGFloat = 50
+    @State private var currentSelected:Tab = .home
+
     var body: some View {
-        VStack {
-            Tabbar()
+        GeometryReader { geometry in
+            VStack {
+                switch currentSelected {
+                case .home:
+                    TabHome().frame(height: geometry.size.height - mTabbarHeight)
+                case .location:
+                    TabLocation().frame(height: geometry.size.height - mTabbarHeight)
+                case .collect:
+                    TabCollect().frame(height: geometry.size.height - mTabbarHeight)
+                case .mine:
+                    TabMine().frame(height: geometry.size.height - mTabbarHeight)
+                }
+                
+                Tabbar(currentSelected:$currentSelected).frame(height: mTabbarHeight)
+            }
         }
     }
 }

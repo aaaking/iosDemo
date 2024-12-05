@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Tabbar: View {
-    @State var currentSelected: Tab = .home
+    @Binding var currentSelected: Tab
     @Namespace var animationNamespace
     
     var body: some View {
@@ -52,5 +52,6 @@ struct Tabbar: View {
 }
 
 #Preview {
-    Tabbar()
+    let currentSelected:Tab = .location
+    return Tabbar(currentSelected: .constant(.location))
 }
