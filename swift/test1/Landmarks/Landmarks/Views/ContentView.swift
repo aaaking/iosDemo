@@ -18,9 +18,9 @@ struct ContentView: View {
                 case .home:
                     TabHome().frame(height: geometry.size.height - mTabbarHeight)
                 case .location:
-                    TabLocation().frame(height: geometry.size.height - mTabbarHeight)
+                    TabCategory().frame(height: geometry.size.height - mTabbarHeight)
                 case .collect:
-                    TabCollect().frame(height: geometry.size.height - mTabbarHeight)
+                    TabHike().frame(height: geometry.size.height - mTabbarHeight)
                 case .mine:
                     TabMine().frame(height: geometry.size.height - mTabbarHeight)
                 }

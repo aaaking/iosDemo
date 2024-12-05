@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabCollect: View {
+struct TabHike: View {
     @State private var modelData = ModelData.sharedInstance()
 
     var body: some View {
@@ -27,5 +27,5 @@ struct TabCollect: View {
 }
 
 #Preview {
-    TabCollect()
+    TabHike()
 }

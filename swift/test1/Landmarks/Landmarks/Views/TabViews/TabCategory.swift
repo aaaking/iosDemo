@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabLocation: View {
+struct TabCategory: View {
     @State private var modelData = ModelData.sharedInstance()
 
     var body: some View {
@@ -31,5 +31,5 @@ struct TabLocation: View {
 }
 
 #Preview {
-    TabLocation()
+    TabCategory()
 }
