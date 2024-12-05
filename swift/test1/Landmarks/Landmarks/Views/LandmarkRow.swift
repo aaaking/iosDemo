@@ -35,7 +35,7 @@ struct LandmarkRow: View {
 }
 
 #Preview("Salmon") {
-    let modelData = ModelData()
+    let modelData = ModelData.sharedInstance()
     let landmarks = modelData.landmarks
     return Group {
         LandmarkRow(landmark: landmarks[0]).environment(modelData)

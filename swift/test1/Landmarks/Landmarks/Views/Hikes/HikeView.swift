@@ -60,7 +60,7 @@ struct HikeView: View {
 
 #Preview {
     VStack {
-        HikeView(hike: ModelData().hikes[0])
+        HikeView(hike: ModelData.sharedInstance().hikes[0])
             .padding()
         Spacer()
     }

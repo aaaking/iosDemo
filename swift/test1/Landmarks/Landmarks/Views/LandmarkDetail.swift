@@ -59,6 +59,6 @@ struct LandmarkDetail: View {
 }
 
 #Preview {
-    let modelData = ModelData()
+    let modelData = ModelData.sharedInstance()
     return LandmarkDetail(landmark: modelData.landmarks[0]).environment(modelData)
 }

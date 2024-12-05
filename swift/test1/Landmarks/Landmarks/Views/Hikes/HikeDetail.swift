@@ -41,5 +41,5 @@ struct HikeDetail: View {
 }
 
 #Preview {
-    HikeDetail(hike: ModelData().hikes[0])
+    HikeDetail(hike: ModelData.sharedInstance().hikes[0])
 }

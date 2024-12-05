@@ -11,6 +11,16 @@ import Foundation
 class ModelData {
     var landmarks: [Landmark] = load("landmarkData.json")
     var hikes: [Hike] = load("hikeData.json")
+    
+    private init() {}
+
+    // 2. 创建静态常量，作为类的唯一实例
+    static let shared = ModelData()
+
+    // 3. 提供访问该实例的方法
+    static func sharedInstance() -> ModelData {
+        return shared
+    }
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabHome: View {
-    @State private var modelData = ModelData()
+    @State private var modelData = ModelData.sharedInstance()
 
     var body: some View {
         LandmarkList().environment(modelData)
