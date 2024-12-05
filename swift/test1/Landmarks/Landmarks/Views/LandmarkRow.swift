@@ -35,8 +35,8 @@ struct LandmarkRow: View {
 }
 
 #Preview("Salmon") {
-    let landmarks = ModelData().landmarks
     let modelData = ModelData()
+    let landmarks = modelData.landmarks
     return Group {
         LandmarkRow(landmark: landmarks[0]).environment(modelData)
         LandmarkRow(landmark: landmarks[1]).environment(modelData)
