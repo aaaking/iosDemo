@@ -1,6 +1,7 @@
 [
     {
         "id":1001,
+        "category":"Lakes",
         "name":"Turtle Rock",
         "imageName":"green-1",
         "park":"ispark",
@@ -14,6 +15,7 @@
     },
     {
         "id":1002,
+        "category":"Lakes",
         "name":"Beijing",
         "imageName":"green-2",
         "park":"ispark",
@@ -27,6 +29,7 @@
     },
     {
         "id":1003,
+        "category":"Lakes",
         "name":"Shanghai",
         "imageName":"green-3",
         "park":"ispark",
@@ -40,6 +43,7 @@
     },
     {
         "id":1004,
+        "category":"Lakes",
         "name":"Shanghai",
         "imageName":"green-3",
         "park":"ispark",
@@ -53,6 +57,7 @@
     },
     {
         "id":1005,
+        "category":"Rivers",
         "name":"Shanghai",
         "imageName":"green-3",
         "park":"ispark",
@@ -66,6 +71,7 @@
     },
     {
         "id":1006,
+        "category":"Rivers",
         "name":"Shanghai",
         "imageName":"green-3",
         "park":"ispark",
@@ -79,6 +85,7 @@
     },
     {
         "id":1007,
+        "category":"Rivers",
         "name":"Shanghai",
         "imageName":"green-3",
         "park":"ispark",
@@ -92,6 +99,7 @@
     },
     {
         "id":1008,
+        "category":"Rivers",
         "name":"Shanghai",
         "imageName":"green-3",
         "park":"ispark",
@@ -105,6 +113,7 @@
     },
     {
         "id":1009,
+        "category":"Mountains",
         "name":"Shanghai",
         "imageName":"green-3",
         "park":"ispark",
@@ -118,6 +127,7 @@
     },
     {
         "id":10010,
+        "category":"Mountains",
         "name":"Shanghai",
         "imageName":"green-3",
         "park":"ispark",
@@ -131,6 +141,7 @@
     },
     {
         "id":10011,
+        "category":"Mountains",
         "name":"Shanghai",
         "imageName":"green-3",
         "park":"ispark",
@@ -144,6 +155,7 @@
     },
     {
         "id":10012,
+        "category":"Mountains",
         "name":"Shanghai",
         "imageName":"green-3",
         "park":"ispark",

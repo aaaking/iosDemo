@@ -23,7 +23,7 @@ struct LandmarkRow: View {
             landmark.image
                 .resizable()
                 .frame(width: 50, height: 50)
-            Text("\(landmark.id)-\(landmark.name)")
+            Text("\(landmark.id)-\(landmark.name)-\(landmark.category.rawValue)")
             Spacer()
             if $modelData.landmarks[landmarkIndex].isFavorite.wrappedValue {
                 Image(systemName: "star.fill")

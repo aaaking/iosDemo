@@ -18,6 +18,7 @@ struct Landmark: Hashable, Codable, Identifiable, Equatable {
         hasher.combine(id)
     }
     
+
     var id: Int
     var isFavorite: Bool = false
     var name: String
@@ -25,6 +26,13 @@ struct Landmark: Hashable, Codable, Identifiable, Equatable {
     var state: String
     var description: String
     
+    var category: Category
+    enum Category: String, CaseIterable, Codable {
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
+
     private var imageName: String
     var image: Image {
         Image(imageName)

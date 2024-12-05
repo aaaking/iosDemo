@@ -9,7 +9,12 @@ import SwiftUI
 
 struct TabLocation: View {
     var body: some View {
-        Text("Location")
+        NavigationSplitView {
+            Text("Hello, World!")
+                .navigationTitle("Featured")
+        } detail: {
+            Text("Select a Landmark")
+        }
     }
 }
 
