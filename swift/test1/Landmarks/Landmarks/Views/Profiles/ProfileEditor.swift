@@ -14,6 +14,7 @@ struct ProfileEditor: View {
         let max = Calendar.current.date(byAdding: .year, value: 1, to: profile.goalDate)!
         return min...max
     }
+    @Environment(\.editMode) var mode
 
     var body: some View {
         List {
@@ -23,6 +24,7 @@ struct ProfileEditor: View {
                 TextField("Username", text: $profile.username)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.trailing)
+                    .disabled(mode?.wrappedValue == .inactive)
             }
             Toggle(isOn: $profile.prefersNotifications) {
                 Text("Enable Notifications")
