@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabHike: View {
+struct TabPager: View {
     @State private var modelData = ModelData.sharedInstance()
 
     var body: some View {
@@ -16,5 +16,5 @@ struct TabHike: View {
 }
 
 #Preview {
-    TabHike()
+    TabPager()
 }

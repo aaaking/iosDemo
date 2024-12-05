@@ -14,7 +14,7 @@
 		1E0298382D006C2E0023EB6B /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0298372D006C2E0023EB6B /* FavoriteButton.swift */; };
 		1E02983A2D007E3B0023EB6B /* TabMine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0298392D007E3B0023EB6B /* TabMine.swift */; };
 		1E02983C2D0149160023EB6B /* TabHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E02983B2D0149160023EB6B /* TabHome.swift */; };
-		1E02983E2D01492E0023EB6B /* TabHike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E02983D2D01492E0023EB6B /* TabHike.swift */; };
+		1E02983E2D01492E0023EB6B /* TabPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E02983D2D01492E0023EB6B /* TabPager.swift */; };
 		1E0298402D01494E0023EB6B /* TabCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E02983F2D01494E0023EB6B /* TabCategory.swift */; };
 		1E0298422D0149A20023EB6B /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0298412D0149A20023EB6B /* Tab.swift */; };
 		1E0298442D014A170023EB6B /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0298432D014A170023EB6B /* Tabbar.swift */; };
@@ -57,7 +57,7 @@
 		1E0298372D006C2E0023EB6B /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		1E0298392D007E3B0023EB6B /* TabMine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMine.swift; sourceTree = "<group>"; };
 		1E02983B2D0149160023EB6B /* TabHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHome.swift; sourceTree = "<group>"; };
-		1E02983D2D01492E0023EB6B /* TabHike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHike.swift; sourceTree = "<group>"; };
+		1E02983D2D01492E0023EB6B /* TabPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPager.swift; sourceTree = "<group>"; };
 		1E02983F2D01494E0023EB6B /* TabCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCategory.swift; sourceTree = "<group>"; };
 		1E0298412D0149A20023EB6B /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		1E0298432D014A170023EB6B /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 			children = (
 				1E0298392D007E3B0023EB6B /* TabMine.swift */,
 				1E02983B2D0149160023EB6B /* TabHome.swift */,
-				1E02983D2D01492E0023EB6B /* TabHike.swift */,
+				1E02983D2D01492E0023EB6B /* TabPager.swift */,
 				1E02983F2D01494E0023EB6B /* TabCategory.swift */,
 				1E0298432D014A170023EB6B /* Tabbar.swift */,
 			);
@@ -346,7 +346,7 @@
 				1E0298812D01B09E0023EB6B /* ProfileEditor.swift in Sources */,
 				1E0298402D01494E0023EB6B /* TabCategory.swift in Sources */,
 				1E02987F2D01A65A0023EB6B /* HikeBadge.swift in Sources */,
-				1E02983E2D01492E0023EB6B /* TabHike.swift in Sources */,
+				1E02983E2D01492E0023EB6B /* TabPager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

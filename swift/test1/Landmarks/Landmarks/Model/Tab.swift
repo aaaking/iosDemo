@@ -19,7 +19,7 @@ enum Tab: CaseIterable {
         case .location:
             return "Category"
         case .collect:
-            return "Hike"
+            return "Pager"
         case .mine:
             return "我的"
         }

@@ -20,7 +20,7 @@ struct ContentView: View {
                 case .location:
                     TabCategory().frame(height: geometry.size.height - mTabbarHeight)
                 case .collect:
-                    TabHike().frame(height: geometry.size.height - mTabbarHeight)
+                    TabPager().frame(height: geometry.size.height - mTabbarHeight)
                 case .mine:
                     TabMine().frame(height: geometry.size.height - mTabbarHeight)
                 }
