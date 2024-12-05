@@ -17,6 +17,7 @@ class ModelData {
             by: { $0.category.rawValue }
         )
     }
+    var profile = Profile.default
 
     private init() {}
 
