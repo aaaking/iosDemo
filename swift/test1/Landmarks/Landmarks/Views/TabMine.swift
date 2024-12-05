@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  TabMine.swift
 //  Landmarks
 //
 //  Created by aaaking on 2024/12/4.
@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TabMine: View {
     var body: some View {
-        VStack {
-            Tabbar()
-        }
+        Text("Mine!")
     }
 }
 
 #Preview {
-    ContentView()
+    TabMine()
 }
