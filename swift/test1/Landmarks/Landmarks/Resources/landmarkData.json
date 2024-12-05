@@ -6,6 +6,7 @@
         "imageName":"green-1",
         "park":"ispark",
         "isFavorite":false,
+        "isFeatured":false,
         "state":"USA",
         "description":"a park just haha",
         "coordinates": {
@@ -20,6 +21,7 @@
         "imageName":"green-2",
         "park":"ispark",
         "isFavorite":true,
+        "isFeatured":false,
         "state":"China",
         "description":"a park just haha",
         "coordinates": {
@@ -34,6 +36,7 @@
         "imageName":"green-3",
         "park":"ispark",
         "isFavorite":false,
+        "isFeatured":false,
         "state":"China",
         "description":"a park just haha",
         "coordinates": {
@@ -48,6 +51,7 @@
         "imageName":"green-3",
         "park":"ispark",
         "isFavorite":true,
+        "isFeatured":false,
         "state":"China",
         "description":"a park just haha",
         "coordinates": {
@@ -62,6 +66,7 @@
         "imageName":"green-3",
         "park":"ispark",
         "isFavorite":false,
+        "isFeatured":false,
         "state":"China",
         "description":"a park just haha",
         "coordinates": {
@@ -76,6 +81,7 @@
         "imageName":"green-3",
         "park":"ispark",
         "isFavorite":false,
+        "isFeatured":false,
         "state":"China",
         "description":"a park just haha",
         "coordinates": {
@@ -90,6 +96,7 @@
         "imageName":"green-3",
         "park":"ispark",
         "isFavorite":false,
+        "isFeatured":false,
         "state":"China",
         "description":"a park just haha",
         "coordinates": {
@@ -104,6 +111,7 @@
         "imageName":"green-3",
         "park":"ispark",
         "isFavorite":false,
+        "isFeatured":false,
         "state":"China",
         "description":"a park just haha",
         "coordinates": {
@@ -118,6 +126,7 @@
         "imageName":"green-3",
         "park":"ispark",
         "isFavorite":false,
+        "isFeatured":false,
         "state":"China",
         "description":"a park just haha",
         "coordinates": {
@@ -132,6 +141,7 @@
         "imageName":"green-3",
         "park":"ispark",
         "isFavorite":false,
+        "isFeatured":false,
         "state":"China",
         "description":"a park just haha",
         "coordinates": {
@@ -146,6 +156,7 @@
         "imageName":"green-3",
         "park":"ispark",
         "isFavorite":false,
+        "isFeatured":false,
         "state":"China",
         "description":"a park just haha",
         "coordinates": {
@@ -160,6 +171,7 @@
         "imageName":"green-3",
         "park":"ispark",
         "isFavorite":false,
+        "isFeatured":true,
         "state":"China",
         "description":"a park just haha",
         "coordinates": {

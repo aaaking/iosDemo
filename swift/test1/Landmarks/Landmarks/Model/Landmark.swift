@@ -26,6 +26,11 @@ struct Landmark: Hashable, Codable, Identifiable, Equatable {
     var state: String
     var description: String
     
+    var isFeatured: Bool = false
+    var featureImage: Image? {
+        isFeatured ? Image(imageName/* + "_feature"*/) : nil
+    }
+
     var category: Category
     enum Category: String, CaseIterable, Codable {
         case lakes = "Lakes"
