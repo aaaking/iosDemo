@@ -36,7 +36,7 @@ struct BadgeSymbol: View {
                     CGPoint(x: middle, y: topHeight / 2 + spacing * 3)
                 ])
             }
-            .fill(Self.symbolColor)
+            .fill(/*BadgeSymbol*/Self.symbolColor)
         }
         
     }
