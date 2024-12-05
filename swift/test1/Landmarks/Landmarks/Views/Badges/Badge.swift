@@ -19,7 +19,7 @@ struct Badge: View {
     
     var body: some View {
         ZStack {
-            BadgeBackground()
+            BadgeBackground()//.scaleEffect(2/3)
             GeometryReader { geometry in
                 badgeSymbols
                     .scaleEffect(1.0 / 4.0, anchor: .top)
