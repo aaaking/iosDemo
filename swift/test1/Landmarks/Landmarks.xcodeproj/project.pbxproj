@@ -85,6 +85,7 @@
 		1E02982F2D0031070023EB6B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1E0298522D015FD10023EB6B /* TabViews */,
 				1E0298502D015C060023EB6B /* Badges */,
 				1EDB322B2CFFF5FA009A00D4 /* ContentView.swift */,
 				1EDA5D882D00117000404CB3 /* CircleImage.swift */,
@@ -93,11 +94,6 @@
 				1E0298332D003C510023EB6B /* LandmarkList.swift */,
 				1E0298352D003F160023EB6B /* LandmarkDetail.swift */,
 				1E0298372D006C2E0023EB6B /* FavoriteButton.swift */,
-				1E0298392D007E3B0023EB6B /* TabMine.swift */,
-				1E02983B2D0149160023EB6B /* TabHome.swift */,
-				1E02983D2D01492E0023EB6B /* TabCollect.swift */,
-				1E02983F2D01494E0023EB6B /* TabLocation.swift */,
-				1E0298432D014A170023EB6B /* Tabbar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +116,18 @@
 				1E02984D2D015A7B0023EB6B /* Badge.swift */,
 			);
 			path = Badges;
+			sourceTree = "<group>";
+		};
+		1E0298522D015FD10023EB6B /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				1E0298392D007E3B0023EB6B /* TabMine.swift */,
+				1E02983B2D0149160023EB6B /* TabHome.swift */,
+				1E02983D2D01492E0023EB6B /* TabCollect.swift */,
+				1E02983F2D01494E0023EB6B /* TabLocation.swift */,
+				1E0298432D014A170023EB6B /* Tabbar.swift */,
+			);
+			path = TabViews;
 			sourceTree = "<group>";
 		};
 		1EDB321D2CFFF5FA009A00D4 = {
