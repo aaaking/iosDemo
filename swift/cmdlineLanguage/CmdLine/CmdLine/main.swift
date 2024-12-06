@@ -1,60 +1,46 @@
 
 import Foundation
 
-enum PrinterError: Error {
-    case outOfPaper
-    case noToner
-    case onFire
+// 重新实现 Swift 标准库中的可选类型
+enum OptionalValue<Wrapped> {
+    case none
+    case some(Wrapped)
 }
 
-func send(job: Int, toPrinter printerName: String) throws -> String {
-    if printerName == "Never Has Toner" {
-        throw PrinterError.noToner
-    }
-    return "Job sent"
-}
-
-
-struct Person {
-    var age = 1
-}
-
-class Test {
-    var shoppingList: [Int] = [1, 2, 3]
-    
-    var occupations: [String:String] = [:]
-
-    func test() {
-        let fs = shoppingList.map{ number in
-            3 * number
+func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> [T.Element]
+    where T.Element: Equatable, T.Element == U.Element
+{
+    var arr: [T.Element] = []
+    for lhsItem in lhs {
+        for rhsItem in rhs {
+            if lhsItem == rhsItem {
+                arr.append(lhsItem)
+            }
         }
-        print("fs=\(fs)")
     }
-    
+    return arr
 }
+
 
 func main() {
-    let test = Test()
-    test.test()
+    var possibleInteger1: OptionalValue<Int> = .none
+    var possibleInteger2: OptionalValue<Int> = .some(100)
+    print("1=\(possibleInteger1) 2=\(possibleInteger2)")
     
+    var aaa1 = anyCommonElements([1, 2, 3], [3, 4, 5])
+    var aaa2 = anyCommonElements("abc", "cde")
+    print("aaa1=\(aaa1)")
+    print("aaa2=\(aaa2)")
 }
+
+func makeArray<Item>(fdd item: Item, numberOfTimes: Int) -> [Item] {
+    var result: [Item] = []
+    for _ in 0..<numberOfTimes {
+        result.append(item)
+    }
+    return result
+}
+
 
 main()
 
-
-var fridgeIsOpen = false
-let fridgeContent = ["milk", "eggs", "leftovers"]
-
-func fridgeContains(_ food: String) -> Bool {
-    fridgeIsOpen = true
-    defer {
-        fridgeIsOpen = false
-        print("2222=fridgeIsOpen\(fridgeIsOpen)")
-    }
-    
-    let result = fridgeContent.contains(food)
-    print("1111resulkt=\(result)")
-    return result
-}
-fridgeContains("banana")
-print(fridgeIsOpen)
